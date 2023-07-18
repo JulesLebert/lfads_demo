@@ -3,11 +3,12 @@ import datetime
 import random
 
 import torch
-import torchvision
+# import torchvision
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as opt
-np = torch._np
+# np = torch._np
+import numpy as np
 from torch.autograd import Variable
 import matplotlib.pyplot as plt
 from utils import batchify_random_sample, update_param_dict
