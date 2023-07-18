@@ -11,7 +11,7 @@ import torch.optim as opt
 import numpy as np
 from torch.autograd import Variable
 import matplotlib.pyplot as plt
-from utils import batchify_random_sample, update_param_dict
+from .utils import batchify_random_sample, update_param_dict
 
 import pdb
 
