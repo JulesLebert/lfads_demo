@@ -1150,7 +1150,10 @@ class LFADS_Net(nn.Module):
         assert os.path.splitext(input_filename)[1] == '.pth', 'Input filename must have .pth extension'
 
         # Load checkpoint
-        state = torch.load(save_loc+input_filename)
+        try:
+            state = torch.load(save_loc+input_filename)
+        except:
+            state = torch.load(save_loc+input_filename, map_location=torch.device('cpu'))
 
         # Set network parameters
         self.load_state_dict(state['net'])
